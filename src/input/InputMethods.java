@@ -5,6 +5,7 @@ package input;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -98,6 +99,15 @@ public class InputMethods {
 
         System.out.printf("printing float variable upto 2 precision digits f=%.2f",f);
 
+    }
+    public static void showDecimalFormats(){
+        System.out.println("showing decimal format");
+
+        double x = 123.456;
+
+        DecimalFormat ft = new DecimalFormat("##.000000");
+        System.out.printf("printing x=%.2f, with decimal format",x);
+        System.out.println("with deci format"+ft.format(x));
     }
 }
 
