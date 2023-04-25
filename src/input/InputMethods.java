@@ -6,7 +6,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 
 public class InputMethods {
@@ -108,6 +110,14 @@ public class InputMethods {
         DecimalFormat ft = new DecimalFormat("##.000000");
         System.out.printf("printing x=%.2f, with decimal format",x);
         System.out.println("with deci format"+ft.format(x));
+    }
+
+    public static void showDateFormat(){
+        System.out.println("showing date format");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MMMM-yyyy");
+        String str = simpleDateFormat.format(new Date());
+        System.out.println("Formatted date : "+str);
+
     }
 }
 
